@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CountContext } from '../../App';
 
-const BabyBrother = (props) => {
-    const {count}=props;
+const BabyBrother = () => {
+    const [count,setCount]= useContext(CountContext);
     return (
         <div>
-            <h2>This is Baby Brother count : {count}</h2>
+            <button onClick={()=>setCount(count+2)}>increase by 2</button>
+            <h2>This is Baby Brother count : </h2>
         </div>
     );
 };

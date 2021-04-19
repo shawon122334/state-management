@@ -9,9 +9,9 @@ export const CountContext = createContext()
 function App() {
   const [count,setCount] = useState(0);
   return (
-    <CountContext.Provider value={count}>
+    <CountContext.Provider value={[count,setCount]}>
       <h2>app.js count : {count}</h2>
-      <Brother count={count} setCount={setCount}></Brother>
+      <Brother ></Brother>
       <Sister></Sister>
       <BabyBrother></BabyBrother>
     </CountContext.Provider>

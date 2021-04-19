@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { CountContext } from '../../App';
 
-const Brother = (props) => {
-    // const [count,setCount] = useState(0);
-    const {count,setCount}=props;
+const Brother = () => {
+    const [count,setCount] = useContext(CountContext);
     return (
         <div>
             <h2>This is Brother</h2>
             <h2>count : {count}</h2>
-            <button onClick={()=>setCount(count+1)}>Increase Value</button>
+            <button onClick={()=>setCount(count+1)}>Increase Value by 1</button>
         </div>
     );
 };
