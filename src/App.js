@@ -7,7 +7,7 @@ import { createContext, useState } from 'react';
 
 export const CountContext = createContext()
 function App() {
-  const [count,setCount] = useState(0);
+  const [count,setCount] = useState('laptop');
   return (
     <CountContext.Provider value={[count,setCount]}>
       <h2>app.js count : {count}</h2>

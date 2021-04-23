@@ -5,9 +5,11 @@ const Brother = () => {
     const [count,setCount] = useContext(CountContext);
     return (
         <div>
-            <h2>This is brother</h2>
+            <h2>This is Brother</h2>
             <h2>count : {count}</h2>
-            <button onClick={()=>setCount(count+1)}>Increase Value by 1</button>
+            <button onClick={()=>setCount('laptop')}>laptop</button>
+            <button onClick={()=>setCount('ball')}>ball</button>
+            <button onClick={()=>setCount('bat')}>bat</button>
         </div>
     );
 };
